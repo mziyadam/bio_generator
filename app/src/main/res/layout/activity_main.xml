@@ -8,44 +8,45 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/background_img"
         android:layout_width="887dp"
         android:layout_height="787dp"
+        android:alpha=".1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        android:alpha=".1"
         app:srcCompat="@drawable/bg_social" />
+
     <TextView
-        android:id="@+id/nama_tv"
+        android:id="@+id/name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu"
         android:text="Nama "
         android:textColor="@color/black"
         android:textSize="15dp"
-        android:fontFamily="@font/ubuntu"
         app:layout_constraintBottom_toTopOf="@+id/reset_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/judul"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
         app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/reset_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
-        android:fontFamily="@font/ubuntu"
         android:background="@color/semi_brown"
+        android:fontFamily="@font/ubuntu"
+        android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hobi_tv"
+        app:layout_constraintTop_toBottomOf="@+id/hobby_tv"
         app:layout_constraintVertical_bias="0.1" />
 
     <Button
@@ -53,9 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="234dp"
-        android:text="Submit"
-        android:fontFamily="@font/ubuntu"
         android:background="@color/semi_brown"
+        android:fontFamily="@font/ubuntu"
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="@+id/reset_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.42"
@@ -64,13 +65,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/judul"
+        android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu"
         android:text="Biography Generator"
         android:textColor="@color/black"
         android:textSize="28dp"
-        android:fontFamily="@font/ubuntu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -79,58 +80,58 @@
         app:layout_constraintVertical_bias="0.04" />
 
     <EditText
-        android:id="@+id/nama"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="masukkan nama"
         android:fontFamily="@font/ubuntu"
+        android:hint="masukkan nama"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/nama_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/name_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nama_tv"
+        app:layout_constraintTop_toTopOf="@+id/name_tv"
         app:layout_constraintVertical_bias="0.756" />
 
     <TextView
-        android:id="@+id/tempat_lahir_tv"
+        android:id="@+id/place_of_birth_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
+        android:fontFamily="@font/ubuntu"
         android:text="Tempat Lahir "
         android:textColor="@color/black"
         android:textSize="15dp"
-        android:fontFamily="@font/ubuntu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nama_tv"
+        app:layout_constraintTop_toTopOf="@+id/name_tv"
         app:layout_constraintVertical_bias="0.079" />
 
     <EditText
-        android:id="@+id/tanggal_lahir"
+        android:id="@+id/date_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="date"
         android:fontFamily="@font/ubuntu"
-        app:layout_constraintBottom_toBottomOf="@+id/tanggal_lahir_tv"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/date_of_birth_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tanggal_lahir_tv"
+        app:layout_constraintTop_toTopOf="@+id/date_of_birth_tv"
         app:layout_constraintVertical_bias="0.653" />
 
     <TextView
-        android:id="@+id/tanggal_lahir_tv"
+        android:id="@+id/date_of_birth_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tanggal Lahir "
         android:fontFamily="@font/ubuntu"
+        android:text="Tanggal Lahir "
 
         android:textColor="@color/black"
         android:textSize="15dp"
@@ -138,63 +139,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempat_lahir_tv"
+        app:layout_constraintTop_toBottomOf="@+id/place_of_birth_tv"
         app:layout_constraintVertical_bias="0.07" />
 
     <EditText
-        android:id="@+id/tempat_lahir"
+        android:id="@+id/place_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="@font/ubuntu"
         android:hint="masukkan tempat lahir"
         android:inputType="textPersonName"
-        android:fontFamily="@font/ubuntu"
-        app:layout_constraintBottom_toBottomOf="@+id/tempat_lahir_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/place_of_birth_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tempat_lahir_tv"
+        app:layout_constraintTop_toTopOf="@+id/place_of_birth_tv"
         app:layout_constraintVertical_bias="0.68" />
 
     <TextView
-        android:id="@+id/hobi_tv"
+        android:id="@+id/hobby_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hobi "
-
         android:fontFamily="@font/ubuntu"
+
+        android:text="Hobi "
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tanggal_lahir_tv"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_birth_tv"
         app:layout_constraintVertical_bias="0.085" />
 
     <EditText
-        android:id="@+id/hobi"
+        android:id="@+id/hobby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="@font/ubuntu"
         android:hint="masukkan hobi"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/hobi_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/hobby_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/hobi_tv"
+        app:layout_constraintTop_toTopOf="@+id/hobby_tv"
         app:layout_constraintVertical_bias="0.692" />
 
     <TextView
-        android:id="@+id/paragraf"
+        android:id="@+id/paragraph"
         android:layout_width="323dp"
         android:layout_height="188dp"
         android:layout_marginTop="11dp"
         android:layout_marginBottom="16dp"
-        android:paddingLeft="4dp"
         android:fontFamily="@font/ubuntu"
+        android:paddingLeft="4dp"
         android:paddingRight="4dp"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -202,37 +203,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paragraf_tv"
+        app:layout_constraintTop_toBottomOf="@+id/paragraph_tv"
         app:layout_constraintVertical_bias="0.009" />
 
     <Button
         android:id="@+id/copy_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Copy to clipboard"
-        android:fontFamily="@font/ubuntu"
         android:background="@color/semi_brown"
+        android:fontFamily="@font/ubuntu"
+        android:text="Copy to clipboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.77"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paragraf"
+        app:layout_constraintTop_toBottomOf="@+id/paragraph"
         app:layout_constraintVertical_bias="0.381" />
 
     <TextView
-        android:id="@+id/paragraf_tv"
+        android:id="@+id/paragraph_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
-        android:text="hasil :"
         android:fontFamily="@font/ubuntu"
+        android:text="hasil :"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reset_btn"
         app:layout_constraintVertical_bias="0.091" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

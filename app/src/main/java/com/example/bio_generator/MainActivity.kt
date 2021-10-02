@@ -11,7 +11,8 @@ import com.example.bio_generator.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var errorMessage: String
+    private lateinit var paragraph: String
     private lateinit var binding: ActivityMainBinding
     var isFilled = false
 
@@ -27,23 +28,26 @@ class MainActivity : AppCompatActivity() {
     fun String.capitalizeWords() = split(' ').joinToString(" ", transform = String::capitalize)
 
     private fun generateParagraf() {
-        val nama = binding.nama.text.toString().capitalizeWords()
-        val tempatLahir = binding.tempatLahir.text.toString().capitalizeWords()
-        val tanggalLahir = binding.tanggalLahir.text.toString()
-        val hobi = binding.hobi.text.toString()
-        if (nama == "" || tempatLahir == "" || tanggalLahir == "" || hobi == "") {
-            binding.paragraf.setText("Lengkapi data terlebih dahulu!")
+        val name = binding.name.text.toString().capitalizeWords()
+        val placeOfBirth = binding.placeOfBirth.text.toString().capitalizeWords()
+        val dateOfBirth = binding.dateOfBirth.text.toString()
+        val hobby = binding.hobby.text.toString()
+        errorMessage == "Lengkapi data terlebih dahulu!"
+        paragraph =
+            "Namaku $name. Aku lahir di $placeOfBirth, pada tanggal $dateOfBirth. So, Aku anak $placeOfBirth. Hobiku $hobby."
+        if (name == "" || placeOfBirth == "" || dateOfBirth == "" || hobby == "") {
+            binding.paragraph.setText(errorMessage)
             return
         }
         isFilled = true
-        binding.paragraf.setText("Namaku $nama. Aku lahir di $tempatLahir, pada tanggal $tanggalLahir. So, Aku anak $tempatLahir. Hobiku $hobi.")
+        binding.paragraph.setText(paragraph)
     }
 
     private fun reset() {
-        binding.nama.text.clear()
-        binding.tempatLahir.text.clear()
-        binding.tanggalLahir.text.clear()
-        binding.hobi.text.clear()
+        binding.name.text.clear()
+        binding.placeOfBirth.text.clear()
+        binding.dateOfBirth.text.clear()
+        binding.hobby.text.clear()
         isFilled = false
     }
 
@@ -51,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         if (isFilled) {
             val clipboard: ClipboardManager =
                 getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("paragraf", binding.paragraf.text.toString())
+            val clip = ClipData.newPlainText("paragraf", binding.paragraph.text.toString())
             clipboard.setPrimaryClip(clip)
         } else {
             Toast.makeText(applicationContext, "Lengkapi data terlebih dahulu!", Toast.LENGTH_SHORT)
