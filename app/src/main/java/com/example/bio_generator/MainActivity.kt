@@ -11,7 +11,7 @@ import com.example.bio_generator.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var errorMessage: String
+    private val errorMessage: String = "Lengkapi data terlebih dahulu!"
     private lateinit var paragraph: String
     private lateinit var binding: ActivityMainBinding
     var isFilled = false
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         val placeOfBirth = binding.placeOfBirth.text.toString().capitalizeWords()
         val dateOfBirth = binding.dateOfBirth.text.toString()
         val hobby = binding.hobby.text.toString()
-        errorMessage == "Lengkapi data terlebih dahulu!"
         paragraph =
             "Namaku $name. Aku lahir di $placeOfBirth, pada tanggal $dateOfBirth. So, Aku anak $placeOfBirth. Hobiku $hobby."
         if (name == "" || placeOfBirth == "" || dateOfBirth == "" || hobby == "") {
@@ -55,10 +54,10 @@ class MainActivity : AppCompatActivity() {
         if (isFilled) {
             val clipboard: ClipboardManager =
                 getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("paragraf", binding.paragraph.text.toString())
+            val clip = ClipData.newPlainText("paragraph", binding.paragraph.text.toString())
             clipboard.setPrimaryClip(clip)
         } else {
-            Toast.makeText(applicationContext, "Lengkapi data terlebih dahulu!", Toast.LENGTH_SHORT)
+            Toast.makeText(applicationContext, errorMessage, Toast.LENGTH_SHORT)
                 .show()
         }
     }
